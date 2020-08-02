@@ -1,0 +1,186 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+  <div class="content-header row">
+    <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+    <h3 class="content-header-title mb-0 d-inline-block">Editar Cliente</h3><br>
+    <div class="row breadcrumbs-top d-inline-block">
+      <div class="breadcrumb-wrapper col-12">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Home</a>
+        </li>
+        <li class="breadcrumb-item"><a href="#">Form Layouts</a>
+        </li>
+        <li class="breadcrumb-item active"><a href="#">Editar Cliente</a>
+        </li>
+      </ol>
+      </div>
+    </div>
+    </div>
+  </div>
+  <div class="content-body"><!-- Basic form layout section start -->
+    <section id="horizontal-form-layouts">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title" id="horz-layout-basic">Editar Cliente</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                <ul class="list-inline mb-0">
+                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  <li><a data-action="close"><i class="ft-x"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-content collpase show">
+              <div class="card-body">
+                <form class="form form-horizontal">
+                  <div class="form-body">
+                    <h4 class="form-section"><i class="ft-user"></i>Información Social</h4>
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpNombre">Nombre</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpNombre" class="form-control" placeholder="Nombre" name="inpNombre" value="Carlos Montes Romero" required>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpEmail">E-mail</label>
+                      <div class="col-md-9">
+                        <input type="email" id="inpEmail" class="form-control" placeholder="Nombre" name="inpEmail" value="montesc@incottech.com" required>
+                      </div>
+                    </div>
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpRazSoc">Razón Social</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpRazSoc" class="form-control" placeholder="Razón Social" name="inpRazSoc" value="Carlos Montes, E. I. R. L." required>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="regimenFiscal">Regimen Fiscal:</label>
+                      <div class="col-md-9">
+                        <select class="form-control input-md">
+                          <option *ngFor="let option of catRegimenFiscal"
+                            value="{{option.regimenFiscalId}}"> {{option.descripcion}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpRFC">RFC</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpRFC" class="form-control" placeholder="RFC" name="inpRFC" value="MORC980425HGTNMR07" required>
+                      </div>
+                    </div>
+    
+                    <h4 class="form-section"><i class="ft-clipboard"></i>Dirección</h4>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpDomicilio">Domicilio</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpDomicilio" class="form-control" placeholder="Domicilio" name="inpDomicilio" value="Playa Condesa !88A" required>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpColonia">Colonia</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpColonia" class="form-control" placeholder="Colonia" name="inpColonia" value="Bellavista" required>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="municipio">Municipio</label>
+                      <div class="col-md-9">
+                        <select class="form-control input-md">
+                          <option *ngFor="let option of catCodigoPostal"
+                            value="{{option.cp}}"> {{option.municipio}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="cp">Código Postal</label>
+                      <div class="col-md-9">
+                        <select class="form-control input-md">
+                          <option *ngFor="let option of catCodigoPostal"
+                            value="{{option.cp}}">
+                            {{option.cp}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="pais">País</label>
+                      <div class="col-md-9">
+                        <select class="form-control input-md">
+                          <option *ngFor="let option of catPais"
+                            value="{{option.paisId}}"> {{option.descripcion}}
+                          </option>
+                        </select>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpTel">Teléfono</label>
+                      <div class="col-md-9">
+                        <input type="tel" id="inpTel" class="form-control" placeholder="Teléfono" name="inpTel" value="442 130 7827" required>
+                      </div>
+                    </div>
+    
+                    <h4 class="form-section"><i class="ft-clipboard"></i>Adicional</h4>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpExp">Lugar de Expedición</label>
+                      <div class="col-md-9">
+                        <input type="text" id="inpExp" class="form-control" placeholder="Lugar de Expedición" name="inpExp" value="Querétaro" required>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpFIEL">FIEL</label>
+                      <div class="col-md-9">
+                        <label id="projectinput8" class="file center-block">
+                          <input type="file" id="fileFiel">
+                          <span class="file-custom"></span>
+                        </label>
+                      </div>
+                    </div>
+    
+                    <div class="form-group row">
+                      <label class="col-md-3 label-control" for="inpCertSell">Certificado Sello</label>
+                      <div class="col-md-9">
+                        <label id="projectinput8" class="file center-block">
+                          <input type="file" id="fileCertSell">
+                          <span class="file-custom"></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+    
+                
+                    <div class="form-actions">
+                      <button type="submit" class="btn btn-primary">
+                        <i class="la la-check-square-o"></i> Editar
+                      </button>
+                      <button type="button" class="btn btn-warning mr-1">
+                        <i class="ft-x"></i> Cancelar
+                      </button>
+                    </div>
+                
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- // Basic form layout section end -->
+  </div>
+  </div>
+</div>

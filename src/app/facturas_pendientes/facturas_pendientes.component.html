@@ -1,0 +1,118 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+      <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+        <div class="row breadcrumbs-top d-inline-block">
+          <div class="breadcrumb-wrapper col-12">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active">Facturas Pendientes
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="card-title" id="basic-layout-form-center">Facturas Pendientes</h1>
+    <div class="card-content collapse show">
+      <div class="card-body">
+
+        <div class="card-text">
+          <p>Consulta y Recuperación de Comprobante</p>
+        </div>
+        <hr>
+        <form class="form row">
+          <div class="form-group mb-1 col-sm-12 col-md-2">
+            <label for="rfcPersoaFiscal">RFC PERSONAL FISCAL</label>
+            <br>
+            <input type="text" class="form-control" id="text" placeholder="RFC">
+          </div>
+          <div class="form-group mb-1 col-sm-12 col-md-2">
+            <label for="fechaFactura">FECHA FACTURA DESDE:</label>
+            <br>
+            <input type="date" class="form-control" id="fechaDesde">
+          </div>
+          <div class="form-group mb-1 col-sm-12 col-md-2">
+            <label for="fechaFactura">HASTA:</label>
+            <br>
+            <input type="date" class="form-control" id="fechaHasta">
+          </div>
+          <div class="form-group col-sm-12 col-md-2 text-center mt-2">
+            <button data-repeater-create class="btn btn-primary"><i class="la la-search"></i>Consultar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <section id="file-export">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Comprobantes</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                <ul class="list-inline mb-0">
+                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  <li><a data-action="close"><i class="ft-x"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="table-responsive">
+                <table class="table table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th>FACTURA ID</th>
+                      <th>FECHA</th>
+                      <th>PERSONA FISCAL</th>
+                      <th>FORMATO</th>
+                      <th>OPERACIÓN</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>24/03/2020</td>
+                      <td>JUAN PEREZ</td>
+                      <td><a href="" >PDF</a> ó <a href="" >XML</a></td>
+                      <td>
+                        <button type="submit" class="btn btn-info"><i class="la la-edit"></i>Modificar</button>
+                        <button type="submit" class="btn btn-danger"> <i class="la la-close"></i>Cancelar</button>
+                        <button type="submit" class="btn btn-success"> <i class="la la-bell"></i>Timbrar</button>
+                    </td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>01/04/2020</td>
+                      <td>JUAN PEREZ</td>
+                      <td><a href="" >PDF</a> ó <a href="" >XML</a></td>
+                      <td>
+                        <button type="submit" class="btn btn-info"><i class="la la-edit"></i>Modificar</button>
+                        <button type="submit" class="btn btn-danger"> <i class="la la-close"></i>Cancelar</button>
+                        <button type="submit" class="btn btn-success"> <i class="la la-bell"></i>Timbrar</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>18/04/2020</td>
+                      <td>JUAN PEREZ</td>
+                      <td><a href="" >PDF</a> ó <a href="" >XML</a></td>
+                      <td>
+                        <button type="submit" class="btn btn-info"><i class="la la-edit"></i>Modificar</button>
+                        <button type="submit" class="btn btn-danger"> <i class="la la-close"></i>Cancelar</button>
+                        <button type="submit" class="btn btn-success"> <i class="la la-bell"></i>Timbrar</button>
+                    </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

@@ -1,0 +1,291 @@
+<div class="app-content content">
+	<div class="content-wrapper">
+		<div class="content-header row mb-1">
+			<app-breadcrumb class="col-12" [breadcrumb]="breadcrumb"></app-breadcrumb>
+		</div>
+		<div class="content-body">
+			<!-- Form wizard with number tabs section start -->
+			<section id="number-tabs">
+				<div class="row">
+					<div class="col-12" *blockUI="'numberTabs'; message: 'Loading'">
+						<m-card [options]="options" (reloadFunction)="reloadNumberTabs($event)">
+							<ng-container mCardHeaderTitle>
+								Registro de Cliente
+							</ng-container>
+							<ng-container mCardBody>
+								<div class="card-block">
+									<aw-wizard #wizard navBarLayout="large-filled-symbols">
+										<aw-wizard-step [stepTitle]="'Información Social'"
+											[navigationSymbol]="{ symbol: '1'}">
+											<form [formGroup]="numberTab">
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="razSoc">Razón Social
+																:</label>
+															<input type="text" id="razSoc" class="form-control" formControlName="razonSocial"
+																placeholder="Razón Social" name="razSoc">
+															<div *ngIf = "razonSocial.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="email">E-mail
+																:</label>
+															<input type="email" id="email" class="form-control"
+																placeholder="E-mail" name="email" formControlName="email">
+															<div *ngIf = "email.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+															  <div *ngIf="email.invalid && email.touched"
+																	class="text-danger">
+																	<div *ngIf = "email.hasError('email')">
+																		Correo inválido
+																	</div>
+																</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="regimenFiscal">Regimen Fiscal:</label>
+															<select class="form-control input-md" formControlName="regimenFiscalId">
+																<option *ngFor="let option of catRegimenFiscal"
+																	value="{{option.regimenFiscalId}}"> {{option.descripcion}}
+																</option>
+															</select>
+															<div *ngIf = "regimenFiscalId.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="city">RFC :</label>
+															<input type="text" id="rfc" class="form-control" formControlName="rfc"
+																placeholder="RFC" > 
+															<div *ngIf = "rfc.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="form-group text-center">
+													<button type="button" uiSref="work" class="btn btn-info btn-raised"
+														awNextStep>
+														Siguiente
+														<span style="margin-left:10px;">
+															<i class="feather ft-chevron-right"></i>
+														</span>
+													</button>
+												</div>
+											</form>
+										</aw-wizard-step>
+										<aw-wizard-step [stepTitle]="'Dirección'" [navigationSymbol]="{ symbol: '2'}">
+											<form [formGroup]="numberTab">
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="domicilio">Domicilio
+																:</label>
+															<input type="text" id="domicilio" class="form-control" formControlName="domicilio"
+																placeholder="Domicilio" name="domicilio">
+															<div *ngIf = "domicilio.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="colonia">Colonia:</label>
+															<input type="text" id="colonia" class="form-control" formControlName="colonia"
+																placeholder="Colonia" name="colonia"> 
+															<div *ngIf = "colonia.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="cp">Código Postal:</label>
+															<input type="text" id="cp" class="form-control" formControlName="cp"
+																(blur)="obtenDatosCP()" placeholder="CP" name="cp">
+															<div *ngIf = "cp.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>													
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="municipio">Municipio:</label>
+															<input type="text" id="municipio" class="form-control" formControlName="municipio"
+																placeholder="Municipio" name="municipio">
+															<div *ngIf = "municipio.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>													
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="estado">Estado:</label>
+															<input type="text" id="v" class="form-control" formControlName="estado"
+																placeholder="Estado" name="estado">
+															<div *ngIf = "estado.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+																
+														</div>
+													</div>													
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="lugExp">Lugar
+																Expedición :</label>
+															<input type="text" id="lugExp" class="form-control" formControlName="lugarExpedicion"
+																placeholder="Lugar Expedición" name="lugExp">
+															<div *ngIf = "lugarExpedicion.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+
+														</div>
+													</div>													
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="paisId">País:</label>
+															<select id="paisId" class="form-control input-md" formControlName="paisId" name="paisId">
+																<option *ngFor="let option of catPais"
+																	value="{{option.paisId}}"> {{option.descripcion}}
+																</option>
+															</select>
+															<div *ngIf = "paisId.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+													</div>
+												</div>
+												<div class="form-group text-center space-20">
+													<button uiSref="personal" type="button"
+														class="btn btn-raised btn-secondary mr-1" awPreviousStep>
+														<span style="margin-right:10px;">
+															<i class="feather ft-chevron-left"></i>
+														</span> Anterior</button>
+													<button uiSref="address" type="button"
+														class="btn btn-raised btn-info" 
+														awNextStep>
+														Siguiente
+														<span style="margin-left:10px;">
+															<i class="feather ft-chevron-right"></i>
+														</span>
+													</button>
+												</div>
+											</form>
+										</aw-wizard-step>
+										<aw-wizard-step [stepTitle]="'Adicional'" [navigationSymbol]="{ symbol: '3'}">
+											<form [formGroup]="numberTab">
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="telefono">Teléfono:</label>
+															<input type="tel" id="telefono" class="form-control" formControlName="telefono"
+																placeholder="Teléfono" name="telefono">
+															<div *ngIf = "telefono.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="nombreUsuario">Cuenta
+																Usuario :</label>
+															<input type="text" id="nombreUsuario" class="form-control" formControlName="nombreUsuario"
+																placeholder="Cuenta" name="nombreUsuario">
+															<div *ngIf = "nombreUsuario.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="passwd">Contraseña
+																:</label>
+															<input type="password" id="passwd" class="form-control" formControlName="passwd"
+																placeholder="Password" name="passwd">
+															<div *ngIf = "passwd.hasError('required')" class="text-danger">
+																Requerido
+															</div>
+														</div>
+													</div>
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="form-control-label" for="passwd2">Repetir contraseña
+																:</label>
+															<input type="password" id="passwd2" class="form-control"
+																placeholder="Password" name="passwd2">
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class='col-md-6'>
+														<div class="form-group">
+															<label class="col-md-3 label-control">FIEL :</label>
+															<label id="projectinput8" class="file center-block">
+																<input type="file" id="file">
+																<span class="file-custom"></span>
+															</label>
+														</div>
+													</div>
+													<div class="col-md-6">
+														<div class="form-group">
+															<label class="col-md-3 label-control">Certificado
+																:</label>
+															<label id="projectinput8" class="file center-block">
+																<input type="file" id="file">
+																<span class="file-custom"></span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="form-group text-center space-20">
+													<button uiSref="personal" type="button"
+														class="btn btn-raised btn-secondary mr-1" awPreviousStep>
+														<span style="margin-right:10px;">
+															<i class="feather ft-chevron-left"></i>
+														</span> Anterior</button>
+													<button uiSref="address" type="button"
+														class="btn btn-raised btn-info" 
+														(click)="guardaCliente()"
+														[disabled]="numberTab.invalid"
+														awNextStep>
+														Guardar
+														<!-- <span style="margin-left:10px;">
+															<i class="feather ft-chevron-right"></i>
+														</span> -->
+													</button>
+												</div>
+											</form>
+										</aw-wizard-step>
+									</aw-wizard>
+								</div>
+							</ng-container>
+						</m-card>
+					</div>
+				</div>
+			</section>
+			<!-- Form wizard with number tabs section end -->
+
+		</div>
+	</div>
+</div>
+<!--////////////////////////////////////////////////////////////////-->

@@ -1,0 +1,213 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row">
+      <div class="content-header-left col-md-6 col-12 mb-2 breadcrumb-new">
+        <div class="row breadcrumbs-top d-inline-block">
+          <div class="breadcrumb-wrapper col-12">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="index.html">Home</a>
+              </li>
+              <li class="breadcrumb-item active">Agregar Productos
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="card-title" id="basic-layout-form-center">Agregar Productos y Servicios</h1>
+    <div class="card-content collapse show">
+      <div class="card-body">
+
+        <div class="card-text">
+          <p>Encuentre la clave para su producto/servicio que necesita</p>
+        </div>
+
+        <div class="card-block">
+          <p><b>Nombre del Producto</b> </p>
+          <fieldset>
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Busca por palabra en el catalogo"
+                aria-describedby="button-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-primary" type="button"><i class="la la-search"></i>Buscar</button>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <hr>
+      </div>
+    </div>
+    <div class="content-body">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Catalogo Productos</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+              <div class="heading-elements">
+                <ul class="list-inline mb-0">
+                  <li><a data-action="collapse"><i class="ft-minus"></i></a></li>
+                  <li><a data-action="reload"><i class="ft-rotate-cw"></i></a></li>
+                  <li><a data-action="expand"><i class="ft-maximize"></i></a></li>
+                  <li><a data-action="close"><i class="ft-x"></i></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="card-content">
+              <div class="table-responsive">
+                <table class="table table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th>Clave Sat</th>
+                      <th>Descripción</th>
+                      <th>División</th>
+                      <th>Grupo</th>
+                      <th>Giro</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>12161601</td>
+                      <td>Catalizadores ácidos</td>
+                      <td>Productos Quimicos</td>
+                      <td>Materiales Explosivos</td>
+                      <td>Comercial</td>
+                    </tr>
+                    <tr>
+                      <td>42152449</td>
+                      <td>Catalizadores de material de impresión de uso odontológico</td>
+                      <td>Equipo Veterinario, Medico y Ortopedico</td>
+                      <td>Equipo y suministro dentales</td>
+                      <td>Comercial</td>
+                    </tr>
+                    <tr>
+                      <td>12161601</td>
+                      <td>Catalizadores ácidos</td>
+                      <td>Productos Quimicos</td>
+                      <td>Aditivos</td>
+                      <td>Industrial</td>
+                    </tr>
+                    <tr>
+                      <td>12161606</td>
+                      <td>Catalizadores reformadores</td>
+                      <td>Productos Quimicos</td>
+                      <td>Aditivos</td>
+                      <td>Industrial</td>
+                    </tr>
+                    <tr>
+                      <td>12161604</td>
+                      <td>Catalizadores de ruptura</td>
+                      <td>Productos Quimicos</td>
+                      <td>Aditivos</td>
+                      <td>Industrial</td>
+                    </tr>
+                    <tr>
+                      <td>72154054</td>
+                      <td>Servicios de carga o eliminación de catalizadores</td>
+                      <td>Servicio de Contruccion y Mantenimiento</td>
+                      <td>Comercio Especializado</td>
+                      <td>Industrial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<hr>
+    <form class="form row">
+      <div class="form-group mb-1 col-sm-12 col-md-2">
+        <label for="idProducto">ID Producto</label>
+        <br>
+        <input type="number" class="form-control" id="text" placeholder="12161601" disabled>
+      </div>
+      <div class="form-group mb-1 col-sm-12 col-md-2">
+        <label for="description">Descripción</label>
+        <br>
+        <input type="text" class="form-control" id="email-addr" placeholder="Nombre Producto">
+      </div>
+      <div class="form-group mb-1 col-sm-12 col-md-2">
+        <label for="precio">Precio</label>
+        <br>
+        <input type="number" class="form-control" id="text" placeholder="$">
+      </div>
+      <div class="form-group mb-1 col-sm-12 col-md-2">
+        <label for="unidadMedida">Unidad de Medida</label>
+        <select class="form-control" id="unidadMedida">
+          <option>Pieza</option>
+          <option>Caja</option>
+          <option>Bolsa</option>
+          <option>Litro</option>
+          <option>Metro</option>
+        </select>
+      </div>
+      <div class="form-group col-sm-12 col-md-2 text-center mt-2">
+        <button data-repeater-create class="btn btn-primary"><i class="ft-plus"></i>Agregar</button>
+      </div>
+    </form>
+    <br>
+    <div class="content-body">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h4 class="card-title">Productos Agregados</h4>
+              <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                <div class="card">
+                  <div class="card-content collapse show">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th scope="col">Clave Sat</th>
+                            <th scope="col">Descripción</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Unidad Medida</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>12161601</td>
+                            <td>Catalizadores ácidos</td>
+                            <td>$250</td>
+                            <td>Litro</td>
+                          </tr>
+                          <tr>
+                            <td>42152449</td>
+                            <td>Catalizadores de uso odontológico</td>
+                            <td>$300</td>
+                            <td>Caja</td>
+                          </tr>
+                          <tr>
+                            <td>12161601</td>
+                            <td>Catalizadores ácidos</td>
+                            <td>$25</td>
+                            <td>Piezas</td>
+                          </tr>
+                          <tr>
+                            <td>12161606</td>
+                            <td>Catalizadores reformadores</td>
+                            <td>$258</td>
+                            <td>Bolsa</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-actions right">
+            <a class="btn btn-primary" href="productos.html" role="button"><i class="la la-save"></i>Guardar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

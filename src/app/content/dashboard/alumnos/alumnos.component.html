@@ -1,0 +1,209 @@
+<div class="app-content content">
+  <div class="content-wrapper">
+    <div class="content-header row mb-1">
+    </div>
+    <div class="content-body">
+    
+      
+
+      <section class="card">
+        <div id="invoice-template" class="card-body">
+          <!-- Invoice Company Details -->
+          <div id="invoice-company-details" class="row">
+            <div class="col-md-6 col-sm-12 text-center text-md-left">
+              <div class="media">
+                <img src="../../../../assets/images/estudent.png" alt="company logo" class=""/>
+                <div class="media-body">
+                  <ul class="ml-2 px-0 list-unstyled">
+                    <li id="lblName">{{name}} {{apellidoPat}} {{apellidoMat}} </li>
+                   
+                    <li>Licenciatura en informatica</li>
+                    <li>{{rfc}}</li>
+                    <li>{{nss}}</li>
+                    <li>{{fechaNacimiento}}</li>
+                    <li>Queretaro QRO.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-right">
+              <h2>NOVENO SEMESTRE</h2>
+              <p class="pb-3">Matricula: 001001</p>
+              <ul class="px-0 list-unstyled">
+                <li>Grupo Actual</li>
+                <li class="lead text-bold-800">M0145520112</li>
+              </ul>
+            </div>
+          </div>
+          <!--/ Invoice Company Details -->
+      
+          <div class="row">
+            <div class="col-xl-3 col-lg-6 col-12">
+                <div class="card bg-gradient-directional-info">
+                    <div class="card-content">
+                        <div class="card-body">
+                            <div class="media d-flex">
+                                <div class="align-self-center">
+                                    <i class="icon-pencil text-white font-large-2 float-left"></i>
+                                </div>
+                                <div class="media-body text-white text-right">
+                                    <h3 class="text-white">45</h3>
+                                    <span>Total de materias cursadas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-lg-6 col-12">
+              <div class="card bg-gradient-directional-danger">
+                  <div class="card-content">
+                      <div class="card-body">
+                          <div class="media d-flex">
+                              <div class="align-self-center">
+                                  <i class="icon-speech text-white font-large-2 float-left"></i>
+                              </div>
+                              <div class="media-body text-white text-right">
+                                  <h3 class="text-white">4</h3>
+                                  <span>Total de Faltas en el periodo escolar:</span>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          </div>
+
+
+          
+
+
+          <!-- Invoice Customer Details 
+          <div id="invoice-customer-details" class="row pt-2">
+            <div class="col-sm-12 text-center text-md-left">
+              <p class="text-muted">Bill To</p>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-left">
+              <ul class="px-0 list-unstyled">
+                <li class="text-bold-800">Mr. Bret Lezama</li>
+                <li>4879 Westfall Avenue,</li>
+                <li>Albuquerque,</li>
+                <li>New Mexico-87102.</li>
+              </ul>
+            </div>
+            <div class="col-md-6 col-sm-12 text-center text-md-right">
+              <p><span class="text-muted">Invoice Date :</span> 06/05/2017</p>
+              <p><span class="text-muted">Terms :</span> Due on Receipt</p>
+              <p><span class="text-muted">Due Date :</span> 10/05/2017</p>
+            </div>
+          </div>
+          / Invoice Customer Details -->
+          <div class="nav-vertical">
+            <div class="borderleft">
+              <ul class="nav nav-tabs nav-left ">
+                <div class="nav nav-tabs">
+                  <ngb-tabset>
+                    <ngb-tab>
+                      <ng-template ngbTabTitle><i class="la la-align-justify"></i> Primer semestre</ng-template>
+                      <ng-template ngbTabContent>
+                        <div id="invoice-items-details" class="pt-2">
+                          <div class="row">
+                            <div class="table-responsive col-sm-12">
+                              <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th>Clave</th>
+                                    <th>Nombre de la Materia</th>
+                                    <th class="text-right">pa1</th>
+                                    <th class="text-right">pa2</th>
+                                    <th class="text-right">pa3</th>
+                                    <th class="text-right">Fa1</th>
+                                    <th class="text-right">Fa2</th>
+                                    <th class="text-right">Fa3</th>
+                                    <th class="text-right">Promedio</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <th scope="row">554115245</th>
+                                    <td>
+                                      <p>Matematicas II</p>
+                                      <p class="text-muted">Impartida por la maestra Juana Perez Montiel</p>
+                                    </td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right">10</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">48976465</th>
+                                    <td>
+                                      <p>Inteligencia Artificial 2</p>
+                                      <p class="text-muted">Impartida por el maestro ezequiel</p>
+                                    </td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right">10</td>
+                                  </tr>
+                                  <tr>
+                                    <th scope="row">78944949</th>
+                                    <td>
+                                      <p>Programacion Orientada a Objetos 2</p>
+                                      <p class="text-muted">Impartida por el maestro ramirez</p>
+                                    </td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right">10</td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right"></td>
+                                    <td class="text-right">10</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                         
+                        </div>
+                      </ng-template>
+                    </ngb-tab>
+                    <ngb-tab>
+                      <ng-template ngbTabTitle><i class="la la-header"></i>Segundo Semestre</ng-template>
+                      <ng-template ngbTabContent>No Inscrito
+                      </ng-template>
+                    </ngb-tab>
+                    <ngb-tab>
+                      <ng-template ngbTabTitle><i class="la la-send-o"></i>Tercer Semestre</ng-template>
+                      <ng-template ngbTabContent>No Inscrito
+                      </ng-template>
+                    </ngb-tab>
+                  </ngb-tabset>
+                </div>
+              </ul>
+            </div>
+          </div>
+
+
+          <!-- Invoice Items Details -->
+         
+      
+
+      
+        </div>
+      </section>
+
+      
+
+    </div>
+  </div>
+</div>
+<!-- ////////////////////////////////////////////////////////////////////////////-->

@@ -1,0 +1,81 @@
+﻿<div class="app-content content" *ngIf="isPageLoaded">
+    <div class="content-wrapper">
+        <div class="content-header row mb-1">
+        </div>
+        <div class="content-body">
+            <section class="flexbox-container">
+                <div class="col-12 d-flex align-items-center justify-content-center">
+                    <div class="col-md-4 col-10 box-shadow-2 p-0">
+                        <div class="card border-grey border-lighten-3 px-1 py-1 m-0">
+                            <div class="card-header border-0">
+                                <div class="card-title text-center">
+                                    <img src="assets/images/encabezado.jpg" alt="branding logo" style="
+                          width: 400px;
+                      ">
+                                </div>
+                              
+                            </div>
+                            <div class="card-content">
+                            
+                                <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                    <span>Ingresa con tu cuenta escolar:</span></p>
+                                <div class="card-body">
+                                    <form class="form-horizontal" [formGroup]="loginForm" (ngSubmit)="tryLogin()">
+                                        <fieldset class="form-group position-relative has-icon-left">
+                                            <input type="text" formControlName="username" class="form-control"
+                                                [ngClass]="{ 'is-invalid': submitted && f.username.errors }" id="user-name"
+                                                placeholder="Your Username" required>
+                                            <div class="form-control-position">
+                                                <i class="feather ft-user"></i>
+                                            </div>
+                                            <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                                                <div *ngIf="f.username.errors.required">Nombre de usuario requerido</div>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset class="form-group position-relative has-icon-left">
+                                            <input type="password" placeholder="Enter Password"
+                                                formControlName="password" class="form-control"
+                                                [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                                            <div class="form-control-position">
+                                                <i class="la la-key"></i>
+                                            </div>
+                                            <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                                                <div *ngIf="f.password.errors.required">Password</div>
+                                            </div>
+
+                                        </fieldset>
+                                        <div class="form-group row">
+                                            <div class="col-md-6 col-12 text-center text-sm-left">
+                                                <div class="custom-control custom-checkbox mb-1">
+                                                    <input type="checkbox" class="custom-control-input"
+                                                        formControlName="rememberMe" name="remember-me"
+                                                        id="remember-me">
+                                                    <label class="custom-control-label"
+                                                        for="remember-me">Recordar</label>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 col-12 float-sm-left text-center text-sm-right"><a
+                                                    href="recover-password.html" class="card-link">¿Olvidaste
+                                                    contraseña?</a></div>
+                                        </div>
+                                        <button type="submit" class="btn btn-outline-info btn-block">
+                                            <i class="fa fa-refresh fa-spin" *ngIf="submitted"></i>
+                                            <i class="feather ft-unlock" *ngIf="!submitted"></i> Entrar
+                                        </button>
+                                    </form>
+                                </div>
+                                <p class="card-subtitle line-on-side text-muted text-center font-small-3 mx-2 my-1">
+                                    <span>¿ No tienes cuanta ?</span></p>
+                                <div class="card-body">
+                                    <a [routerLink]="['/register']" class="btn btn-outline-danger btn-block"><i
+                                            class="feather ft-user"></i> Registráte</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+</div>
