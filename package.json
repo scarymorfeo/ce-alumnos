@@ -50,7 +50,7 @@
     "google-libphonenumber": "^3.2.10",
     "html2canvas": "^1.0.0-rc.5",
     "icheck": "^1.0.2",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "jspdf-autotable": "^2.3.5",
     "lodash-es": "^4.17.15",
     "ng-chartist": "^4.1.0",
