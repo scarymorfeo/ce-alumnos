@@ -76,7 +76,7 @@
     "rxjs": "^6.5.5",
     "save": "^2.3.3",
     "tslib": "^1.13.0",
-    "xlsx": "^0.14.5"
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.900.7",
